@@ -27,6 +27,7 @@ Console.CreateHookMassage(
     "Exemplo de mensagem com informações.",
     tonumber(0x02e1f5) -- Azul
 )
+```
 
 ## 2. Como Adaptar o Código ao Seu Projeto
 
@@ -36,3 +37,34 @@ A primeira coisa que você precisa fazer é substituir a URL do Webhook no scrip
 
 ```lua
 ["WebHook"] = "https://webhook.lewisakura.moe/api/webhooks/..."
+```
+
+## 3. Ultilize os Métodos no Seu Código
+
+Para enviar um log:
+```lua
+Console:Log(game.Workspace.AlgumaCoisa, "Mensagem de log")
+```
+
+Para reportar um erro:
+```lua
+Console:Error(game.Workspace.AlgumaCoisa, "Mensagem de erro", 404)
+
+```
+
+## 4 Personalize as Cores
+
+```lua
+tonumber(0x02e1f5) -- Azul (Logs)
+tonumber(0xcc080e) -- Vermelho (Erros)
+```
+
+### Verifique se a Função Está Sendo Chamada Corretamente
+```lua
+Console.CreateHookMassage(
+    "https://seu.webhook.url",
+    "Título Personalizado",
+    "Corpo da mensagem aqui.",
+    tonumber(0x00ff00) -- Verde
+)
+```
