@@ -27,3 +27,12 @@ Console.CreateHookMassage(
     "Exemplo de mensagem com informações.",
     tonumber(0x02e1f5) -- Azul
 )
+
+## 2. Como Adaptar o Código ao Seu Projeto
+
+### 🔧 1. Configure o Webhook
+
+A primeira coisa que você precisa fazer é substituir a URL do Webhook no script, na linha:
+
+```lua
+["WebHook"] = "https://webhook.lewisakura.moe/api/webhooks/..."
